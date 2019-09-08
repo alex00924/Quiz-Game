@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">QuizGame</string>
+    <string name="easy">1</string>
+    <string name="medium">2</string>
+    <string name="hard">3</string>
+    <string name="hardcore">4</string>
+    <string name="keystroke1">KeyStroke Game-1</string>
+    <string name="keystroke2">KeyStroke Game-2</string>
+    <string name="keystroke3">KeyStroke Game-3</string>
+    <string name="keystroke4">KeyStroke Game-4</string>
+    <string name="walk1">Walking Game-1</string>
+    <string name="walk2">Walking Game-2</string>
+    <string name="walk3">Walking Game-3</string>
+    <string name="walk4">Walking Game-4</string>
+    <string name="touch1">Touch Game-1</string>
+    <string name="touch2">Touch Game-2</string>
+    <string name="touch3">Touch Game-3</string>
+    <string name="touch4">Touch Game-4</string>
+    <string name="touch5">Touch Game-5</string>
+    <string name="tutorialkey1">In this game a number will be displayed on your screen.\n You need to write that number in words and submit your answer.\n Try to answer all questions within given time."</string>
+    <string name="tutorialkey2">"In this game few numbers will be displayed on your screen one by one.\n You need to memorise them and then write then in correct sequence in space ' ' separated format.\n Try to answer all questions within given time."</string>
+    <string name="tutorialkey3">"In this game few words will be displayed on your screen one by one.\n You need to memorise them and then write then in correct sequence in space ' ' separated format.\n Try to answer all questions within given time."</string>
+    <string name="tutorialkey4">"In this game a string will be displayed on your screen for few seconds.\n You need to memorise it and then write it in answer section.\n Try to answer all questions within given time."</string>
+    <string name="tutorialtouch1">"In this game A statement will be shown.\n You need to answer if that statement is correct or wrong by swipe left or right.\n Try to answer all questions within given time."</string>
+    <string name="tutorialtouch2">"In this game 'X' number of images will be displayed on your screen for few seconds.\n You need to memorise them and then guess if shown image was present in already shown images.\n Try to answer all questions within given time."</string>
+    <string name="tutorialtouch3">"In this game 'X' number of balloons will be displayed on your screen.\n You need to burst them all simultaneously.\n Try to burst within given time."</string>
+    <string name="tutorialtouch4">"In this game 'X' number of switch buttons will be displayed on your screen.\n You need to turn them all within given time."</string>
+    <string name="tutorialtouch5">"In this game a button and balloon will be displayed on your screen.\n You need to burst the balloon by tapping on it while you hold the button.Try to burst them all within given time."</string>
+    <string name="tutorialwalk1">"In this game You have to take 'X' number of steps."</string>
+    <string name="tutorialwalk2">"In this game You have to do 'X' number of Jumps."</string>
+    <string name="tutorialwalk3">"In this game You have to do 'X' number of squats.\n Try to complete within given time."</string>
+    <string name="tutorialwalk4">"In this game You have to do 'X' number of squats.\n Try to complete within given time."</string>
+    <string name="success">Success</string>
+    <string name="failure">Failure</string>
+</resources>
