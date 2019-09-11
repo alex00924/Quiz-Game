@@ -73,7 +73,7 @@ public class WalkGamesActivity extends AppCompatActivity implements SensorEventL
     Timer t;
     TimerTask task;
 
-    int MAX_TIME = 5;
+    int MAX_TIME = 1200;
 
     List<WalkGesture> arrGestures = new ArrayList<>();
 
