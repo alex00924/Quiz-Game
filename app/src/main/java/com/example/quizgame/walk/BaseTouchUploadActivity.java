@@ -1,5 +1,6 @@
 package com.example.quizgame.walk;
 
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
@@ -43,6 +44,8 @@ public class BaseTouchUploadActivity extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
+                SharedPreferences sp = getSharedPreferences("UserInfo", MODE_PRIVATE);
+                params.put("username", sp.getString("username", ""));
                 params.put("game", "Touch Game");
                 params.put("stage", strStage);
                 params.put("contents", arrTouchGesture.toString() + " ");

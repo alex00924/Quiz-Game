@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    android:padding="20dp">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_name"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:hint="YOUR NAME"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_ask"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dialog_title"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginTop="30dp"
+            android:textAlignment="center"/>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Use previous one"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:id="@+id/radio_prev"/>
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Create new one"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:id="@+id/radio_new"
+                android:checked="true"/>
+        </RadioGroup>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="CONFIRM"
+        android:background="@color/button_primary"
+        android:layout_margin="10dp"
+        android:layout_gravity="center"
+        android:id="@+id/btn_confirm"
+        android:layout_marginTop="20dp"/>
+</LinearLayout>

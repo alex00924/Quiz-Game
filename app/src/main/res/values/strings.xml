@@ -32,4 +32,5 @@
     <string name="tutorialwalk4">"In this game You have to do 'X' number of squats.\n Try to complete within given time."</string>
     <string name="success">Success</string>
     <string name="failure">Failure</string>
+    <string name="dialog_title">Do you want to use previous username or create a new one?</string>
 </resources>

@@ -2,6 +2,7 @@ package com.example.quizgame;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.CountDownTimer;
 import android.os.VibrationEffect;
@@ -331,6 +332,8 @@ public class KeystrokeQuizActivity extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
+                SharedPreferences sp = getSharedPreferences("UserInfo", MODE_PRIVATE);
+                params.put("username", sp.getString("username", ""));
                 params.put("game", "Keystrokes Game");
                 params.put("stage", mQuizType+"_"+mQuizDifficulty);
                 params.put("contents", arrKeyGestures.toString());

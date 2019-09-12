@@ -2,6 +2,7 @@ package com.example.quizgame;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -73,7 +74,7 @@ public class WalkGamesActivity extends AppCompatActivity implements SensorEventL
     Timer t;
     TimerTask task;
 
-    int MAX_TIME = 1200;
+    int MAX_TIME = 30;
 
     List<WalkGesture> arrGestures = new ArrayList<>();
 
@@ -248,6 +249,8 @@ public class WalkGamesActivity extends AppCompatActivity implements SensorEventL
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
+                SharedPreferences sp = getSharedPreferences("UserInfo", MODE_PRIVATE);
+                params.put("username", sp.getString("username", ""));
                 params.put("game", "Walk Game");
                 params.put("stage", mQuizType+"_"+mQuizDifficulty);
                 params.put("contents", arrGestures.toString());
