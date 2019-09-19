@@ -21,20 +21,21 @@
             android:text="@string/success"
             android:id="@+id/massage"
             android:textSize="20sp"
-            android:textColor="@color/white"/>
+            android:textColor="@color/dark"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/failure"
             android:id="@+id/result"
             android:textSize="16sp"
-            android:textColor="@color/white"/>
+            android:textColor="@color/dark"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Back"
             android:id="@+id/backbtn"
             android:background="@color/button_primary"
+            android:textColor="@color/button_text"
             android:layout_margin="20dp"/>
     </LinearLayout>
     <LinearLayout
@@ -49,13 +50,14 @@
             android:id="@+id/waytosolve"
             android:textAlignment="center"
             android:textSize="20sp"
-            android:textColor="@color/white"/>
+            android:textColor="@color/dark"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Ok"
             android:id="@+id/okbtn"
             android:background="@color/button_primary"
+            android:textColor="@color/button_text"
             android:layout_margin="20dp"/>
     </LinearLayout>
     <ProgressBar
@@ -226,6 +228,6 @@
             android:id="@+id/tvhowtoans1"
             android:gravity="bottom"
             android:textAlignment="center"
-            android:textColor="@color/white"/>
+            android:textColor="@color/dark"/>
     </LinearLayout>
 </LinearLayout>

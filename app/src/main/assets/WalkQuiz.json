@@ -3,97 +3,97 @@
     {
       "quizDifficulty": "4",
       "quizType": "walk4",
-      "noOfSteps": 1000,
-      "time": 120
+      "noOfSteps": 160,
+      "time": 0
     },
     {
       "quizDifficulty": "3",
       "quizType": "walk4",
-      "noOfSteps": 1200,
-      "time": 180
+      "noOfSteps": 140,
+      "time": 0
     },
     {
       "quizDifficulty": "2",
       "quizType": "walk4",
-      "noOfSteps": 1400,
-      "time": 240
+      "noOfSteps": 120,
+      "time": 0
     },
     {
       "quizDifficulty": "1",
       "quizType": "walk4",
-      "noOfSteps": 1600,
-      "time": 300
-    },
-    {
-      "quizDifficulty": "4",
-      "quizType": "walk3",
-      "noOfSteps": 1000,
-      "time": 120
-    },
-    {
-      "quizDifficulty": "3",
-      "quizType": "walk3",
-      "noOfSteps": 1200,
-      "time": 180
-    },
-    {
-      "quizDifficulty": "2",
-      "quizType": "walk3",
-      "noOfSteps": 1400,
-      "time": 240
-    },
-    {
-      "quizDifficulty": "1",
-      "quizType": "walk3",
-      "noOfSteps": 1600,
-      "time": 300
-    },
-    {
-      "quizDifficulty": "4",
-      "quizType": "walk2",
-      "noOfSteps": 1600,
-      "time": 0
-    },
-    {
-      "quizDifficulty": "3",
-      "quizType": "walk2",
-      "noOfSteps": 1400,
-      "time": 0
-    },
-    {
-      "quizDifficulty": "2",
-      "quizType": "walk2",
-      "noOfSteps": 1200,
-      "time": 0
-    },
-    {
-      "quizDifficulty": "1",
-      "quizType": "walk2",
-      "noOfSteps": 1000,
+      "noOfSteps": 100,
       "time": 0
     },
     {
       "quizDifficulty": "4",
+      "quizType": "walk3",
+      "noOfSteps": 160,
+      "time": 0
+    },
+    {
+      "quizDifficulty": "3",
+      "quizType": "walk3",
+      "noOfSteps": 140,
+      "time": 0
+    },
+    {
+      "quizDifficulty": "2",
+      "quizType": "walk3",
+      "noOfSteps": 120,
+      "time": 0
+    },
+    {
+      "quizDifficulty": "1",
+      "quizType": "walk3",
+      "noOfSteps": 100,
+      "time": 0
+    },
+    {
+      "quizDifficulty": "4",
+      "quizType": "walk2",
+      "noOfSteps": 160,
+      "time": 0
+    },
+    {
+      "quizDifficulty": "3",
+      "quizType": "walk2",
+      "noOfSteps": 140,
+      "time": 0
+    },
+    {
+      "quizDifficulty": "2",
+      "quizType": "walk2",
+      "noOfSteps": 120,
+      "time": 0
+    },
+    {
+      "quizDifficulty": "1",
+      "quizType": "walk2",
+      "noOfSteps": 100,
+      "time": 0
+    },
+    {
+      "quizDifficulty": "4",
       "quizType": "walk1",
-      "noOfSteps": 1600,
+      "noOfSteps": 160,
       "time": 0
     },
     {
       "quizDifficulty": "3",
       "quizType": "walk1",
-      "noOfSteps": 1400,
+      "noOfSteps": 140,
       "time": 0
     },
     {
       "quizDifficulty": "2",
       "quizType": "walk1",
-      "noOfSteps": 1200,
+      "noOfSteps": 120,
       "time": 0
     },
     {
       "quizDifficulty": "1",
       "quizType": "walk1",
-      "noOfSteps": 1000,
+      "noOfSteps": 10,
       "time": 0
     }
   ]

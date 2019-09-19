@@ -108,8 +108,12 @@ public class MainActivity extends AppCompatActivity {
         btnConfirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String strName = txtName.getText().toString();
+                if (radioNew.isChecked() && strName.isEmpty())
+                    return;
+
                 if (radioNew.isChecked() || userName == null) {
-                    writeUserName(txtName.getText().toString());
+                    writeUserName(strName);
                 }
                 dialog.dismiss();
             }

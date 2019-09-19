@@ -9,6 +9,8 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Build;
 import android.os.CountDownTimer;
+import android.os.Handler;
+import android.os.SystemClock;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
@@ -195,19 +197,23 @@ public class WalkGamesActivity extends AppCompatActivity implements SensorEventL
     }
 
     public void checkForComplete(){
-        if(numSteps > mGame.getNoOfStep() && !mTimeUp){
-            mMassage.setText(R.string.success);
-            mStars = 3;
-        }else {
-            mMassage.setText(R.string.failure);
-            mStars = 0;
-        }
+//        if(numSteps >= mGame.getNoOfStep() && !mTimeUp){
+//            mMassage.setText(R.string.success);
+//            mStars = 3;
+//        }else {
+//            mMassage.setText(R.string.failure);
+//            mStars = 0;
+//        }
+        mMassage.setText(R.string.success);
+        mStars = 3;
 
-        if (mQuizType.equals(("walk1")) || mQuizType.equals(("walk2"))) {
-            mResult.setText("Congratulations on the steps you took to burn 100 calories");
-        } else {
-            mResult.setText("Congratulations you made " + mGame.getNoOfStep() + " steps in " + mTimetoAns + " seconds and you burnt 100 calories");
-        }
+        mResult.setText("Congratulations you did " + mGame.getNoOfStep() + " steps and you burned " + mGame.getNoOfStep()/2 + " calories");
+
+//        if (mQuizType.equals(("walk1")) || mQuizType.equals(("walk2"))) {
+//            mResult.setText("Congratulations on the steps you took to burn 100 calories");
+//        } else {
+//            mResult.setText("Congratulations you made " + mGame.getNoOfStep() + " steps in " + mTimetoAns + " seconds and you burnt 100 calories");
+//        }
 
 //        mResult.setText("You have got "+mStars+" Stars");
         String Key = mQuizType+"_"+mQuizDifficulty;
@@ -261,31 +267,33 @@ public class WalkGamesActivity extends AppCompatActivity implements SensorEventL
         requestQueue.add(jsonReq);
     }
 
+    long startTime, timeInSecond = 0;
+    Handler customHandler = new Handler();
+    private Runnable updateTimerThread = new Runnable() {
+        public void run() {
+            timeInSecond = (SystemClock.uptimeMillis() - startTime)/1000;
+            txtTime.setText("Time elapsed - " + timeInSecond / 3600 + " : " + timeInSecond / 60 + " : " + timeInSecond % 60);
+            customHandler.postDelayed(this, 1000);
+        }
+    };
+
     public void startCounter(){
         if (mTimetoAns < 1) {
             mBar.setVisibility(View.GONE);
             mTimetoAns = MAX_TIME;
         }
-
-        mTotal = 0;
-        mCdt = new CountDownTimer(mTimetoAns * 1000, 200) {
-            public void onTick(long millisUntilFinished) {
-                mTotal = (int) (Math.abs((int) millisUntilFinished/(mTimetoAns*10)));
-                mBar.setProgress( mTotal);
-                long nElapsed = mTimetoAns - millisUntilFinished/1000;
-                txtTime.setText("Time elapsed - " + nElapsed / 60 + " : " + nElapsed % 60);
-            }
-            public void onFinish() {
-                mBar.setProgress(0);
-                mTimeUp = true;
-                checkForComplete();
-            }
-        }.start();
+        startTime = SystemClock.uptimeMillis();
+        customHandler.postDelayed(updateTimerThread, 0);
     }
+
     public void stopCounter(){
-        if(mCdt != null){
-            mCdt.cancel();
+        if(customHandler != null){
+            customHandler.removeCallbacks(updateTimerThread);
         }
+//        mBar.setProgress(0);
+        mTimeUp = true;
+        checkForComplete();
+
     }
 
     // Vibrate for 150 milliseconds
