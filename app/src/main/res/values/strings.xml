@@ -33,4 +33,6 @@
     <string name="success">Success</string>
     <string name="failure">Failure</string>
     <string name="dialog_title">Do you want to use previous username or create a new one?</string>
+    <string name="terms_condition">Terms &amp; Conditions</string>
+    <string name="select_above">Select above options in order to play!</string>
 </resources>

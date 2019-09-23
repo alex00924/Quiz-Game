@@ -10,8 +10,10 @@ import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     String  USER_INFO = "UserInfo";
@@ -85,6 +87,8 @@ public class MainActivity extends AppCompatActivity {
         final EditText txtName = dialog.findViewById(R.id.user_name);
         RadioButton radioPrev = dialog.findViewById(R.id.radio_prev);
         final RadioButton radioNew = dialog.findViewById(R.id.radio_new);
+        final CheckBox chTerms = dialog.findViewById(R.id.ch_terms);
+        final CheckBox chSelect = dialog.findViewById(R.id.ch_select);
 
         final String userName = readUserName();
         if (userName == null) {
@@ -108,6 +112,10 @@ public class MainActivity extends AppCompatActivity {
         btnConfirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (!chTerms.isChecked() || !chSelect.isChecked()) {
+                    Toast.makeText(getApplicationContext(), "Please select checkboxes", Toast.LENGTH_LONG).show();
+                    return;
+                }
                 String strName = txtName.getText().toString();
                 if (radioNew.isChecked() && strName.isEmpty())
                     return;
